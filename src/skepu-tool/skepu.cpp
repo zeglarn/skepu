@@ -17,6 +17,7 @@ llvm::cl::opt<bool> GenCUDA("cuda",  llvm::cl::desc("Generate CUDA backend"),   
 llvm::cl::opt<bool> GenOMP("openmp", llvm::cl::desc("Generate OpenMP backend"), llvm::cl::cat(SkePUCategory));
 llvm::cl::opt<bool> GenCL("opencl",  llvm::cl::desc("Generate OpenCL backend"), llvm::cl::cat(SkePUCategory));
 llvm::cl::opt<bool> GenStarPUMPI("starpu-mpi",  llvm::cl::desc("Generate StarPU-MPI backend"), llvm::cl::cat(SkePUCategory));
+llvm::cl::opt<bool> GenMPI("mpi",  llvm::cl::desc("Generate MPI backend"), llvm::cl::cat(SkePUCategory));
 
 llvm::cl::opt<bool> Verbose("verbose",  llvm::cl::desc("Verbose logging printout"), llvm::cl::cat(SkePUCategory));
 llvm::cl::opt<bool> Silent("silent",  llvm::cl::desc("Disable normal printouts"), llvm::cl::cat(SkePUCategory));
@@ -118,6 +119,7 @@ public:
 		if (GenCL)   GlobalRewriter.InsertText(SLStart, "#define SKEPU_OPENCL 1\n");
 		if (GenCUDA) GlobalRewriter.InsertText(SLStart, "#define SKEPU_CUDA 1\n");
 		if (GenStarPUMPI) GlobalRewriter.InsertText(SLStart, "#define SKEPU_STARPU_MPI 1\n");
+		if (GenMPI) GlobalRewriter.InsertText(SLStart, "#define SKEPU_MPI 1\n");
 //		if (!DoNotGenLineDirectives)
 //			GlobalRewriter.InsertText(SLStart, "#line 1 \"" + inputFileName + "\"\n");
 		
