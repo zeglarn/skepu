@@ -63,27 +63,27 @@ RUN_DIR     = run
 # All SkePU example programs (used for 'make all-[parallel|sequential|cluster]' and 'make clean').
 
 PROGS=
-PROGS += cellular_automaton
-PROGS += cma
-PROGS += conjugate_gradient
-PROGS += coulombic
-PROGS += dotproduct
-PROGS += edgedetect
-PROGS += heat_diffusion # no red-black update mode in CUDA
-PROGS += mandelbrot
-PROGS += maxmin
-PROGS += median
-PROGS += miller_rabin
+# PROGS += cellular_automaton
+# PROGS += cma
+# PROGS += conjugate_gradient
+# PROGS += coulombic
+# PROGS += dotproduct
+# PROGS += edgedetect
+# PROGS += heat_diffusion # no red-black update mode in CUDA
+# PROGS += mandelbrot
+# PROGS += maxmin
+# PROGS += median
+# PROGS += miller_rabin
 PROGS += mmmult
-PROGS += montecarlo
-PROGS += mvmult
-PROGS += mvmult_row
-PROGS += nbody
-PROGS += nbody_mappairs
-PROGS += ppmcc
-PROGS += psnr
-PROGS += riemann_sum
-PROGS += taylor
+# PROGS += montecarlo
+# PROGS += mvmult
+# PROGS += mvmult_row
+# PROGS += nbody
+# PROGS += nbody_mappairs
+# PROGS += ppmcc
+# PROGS += psnr
+# PROGS += riemann_sum
+# PROGS += taylor
 
 
 CLUSTER_PROGS =
